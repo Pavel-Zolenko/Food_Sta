@@ -1,0 +1,209 @@
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  box-shadow: 0px -4px 24px rgba(105, 105, 105, 0.1);
+   
+   background-color: #FEFEFE;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+
+.footer__container {
+  @extend %container;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  @media screen and (min-width: 768px) {
+    gap: 100px;
+  }
+  @media screen and (min-width: 1280px) {
+    gap: 80px;
+  }
+}
+
+.footer__nav-wrap {
+  display: flex;
+  gap: 81px;
+
+  @media screen and (min-width: 768px) {
+    align-items: center;
+    gap: 114px;
+  }
+  @media screen and (min-width: 1280px) {
+    gap: 145px;
+  }
+}
+
+.footer__left-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  @media screen and (min-width: 1280px) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+.form--decor {
+  color: $txt-clr;
+
+}
+
+.footer__label-text {
+  @include font(21, 14);
+  font-weight: 500;
+  display: block;
+  
+  @media screen and (max-width: 767px) {
+    margin-bottom: 12px;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: block;
+  }
+}
+
+.footer-btn--border-clr {
+  min-width: 103px;
+  height: 42px;
+
+  background-color: #ffffff;
+  border: 0.854167px solid $btn-border;
+  border-radius: 30px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:focus,
+  &:hover {
+    background-color: $second-accent-clr;
+    
+  }
+
+  @media screen and (max-width: 767px) {
+    display: block;
+    margin-left: auto;
+    margin-top: 20px;
+  }
+
+}
+
+.form__input--decor {
+  width: 100%;
+
+  @media screen and (min-width: 768px) {
+    width: 279px;
+    margin-top: 12px;
+    margin-right: 13px;
+  }
+}
+
+
+.footer__text {
+  margin-top: 20px;
+
+  @include font(12, 10);
+
+  color: $txt-clr;
+
+  @media screen and (min-width: 768px) {
+    margin-top: 15px;
+    @include font(14, 12);
+  }
+    
+}
+.footer__text-link {
+  color: $btn-border;
+}
+
+.footer__list {
+  @extend %reset-list;
+  display: flex;
+  gap: 32px;
+  @media screen and (min-width: 768px) {
+    gap: 20px;
+  }
+}
+
+.footer__link {
+  @include font(12, 10);
+
+  color: $btn-border;
+  @media screen and (min-width: 768px) {
+    @include font(14, 12);
+  }
+}
+
+.footer__copyright {
+  @include font(12, 10);
+
+  color: $txt-clr;
+
+  @media screen and (max-width: 767px) {
+    margin-top: 40px;
+    text-align: center;
+  }
+
+  @media screen and (min-width: 768px) {
+    @include font(14, 12);
+  }
+}
+
+.footer__right-wrap {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.footer-overlay {
+    height: auto;
+
+    background-repeat: no-repeat;
+    background-position: bottom, left 132px, right top 0;
+
+    @media screen and (max-width: 767px) {
+      background-image: url(../images/footer/img-bg/img-1-@1x_mob.png), url(../images/footer/img-bg/img-2-@1x_mob.png),
+          url(../images/footer/img-bg/img-3-@1x_mob.png);
+      
+        @media (min-device-pixel-ratio:2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+          background-image: url(../images/footer/img-bg/img-1-@2x_mob.png), url(../images/footer/img-bg/img-2-@2x_mob.png),
+            url(../images/footer/img-bg/img-3-@2x_mob.png);
+          background-size: 255px, 110px, 104px;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+      background-image: url(../images/footer/img-bg/img-1-@1x_tab.png), url(../images/footer/img-bg/img-2-@1x_tab.png);
+      background-position: right top, bottom;
+        @media (min-device-pixel-ratio:2),
+          (min-resolution: 192dpi),
+          (min-resolution: 2dppx) {
+            background-image: url(../images/footer/img-bg/img-1-@2x_tab.png), url(../images/footer/img-bg/img-2-@2x_tab.png) ;
+            background-size: 203px, 802px;
+          }
+    }
+
+    @media screen and (min-width: 1280px) {
+        background-image: url(../images/footer/img-bg/img-@1x_desk.png);
+        background-position: bottom;
+        @media (min-device-pixel-ratio:2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: url(../images/footer/img-bg/img-@2x_desk.png);
+                background-size: 1280px;
+            }
+    }        
+}
+
+
+
+
+
+
